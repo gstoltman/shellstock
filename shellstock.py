@@ -28,7 +28,7 @@ def fetch_stock_data(symbol):
     return price_list
 
 def plot_performance(price_list, symbol):
-    max_width = 60
+    max_width = 12
     max_value = max(price_list)
     min_value = min(price_list)
     normalized_data = [(value - min_value) / (max_value - min_value) * max_width for value in price_list]
@@ -39,7 +39,7 @@ def plot_performance(price_list, symbol):
     for i, value in enumerate(normalized_data):
         x = int(value)
         y = i * (height // len(price_list))  # Distribute points along the Y-axis
-        canvas[y][x] = '*'  # Mark the point
+        canvas[y][x] = f'* - {value}'  # Mark the point
 
     for row in canvas:  # Reverse to have the low values at the bottom
         print(''.join(row))
