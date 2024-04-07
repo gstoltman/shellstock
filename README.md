@@ -4,7 +4,19 @@ A quick way to check stock price and performance in a shell using python for the
 
 ## Usage
 
-* git clone repo
-* >cd shellstock
-* >nix-shell
-* python shellstock
+* Clone repo
+```bash
+git clone repo
+```
+* Navigate to repo
+```bash
+cd shellstock
+```
+* Enter python nix-shell env
+```bash
+nix-shell
+```
+* Run program
+```bash
+python shellstock
+```
